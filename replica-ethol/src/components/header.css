@@ -1,0 +1,36 @@
+/* Aturan dasar untuk semua link menu */
+.nav-link-custom {
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px; /* Membuat sudut background melengkung */
+  padding: 8px 16px !important; /* Memberi ruang agar background tidak mepet teks */
+}
+
+/* KONDISI 1: Saat Navbar di atas (Transparan) */
+.nav-link-top {
+  color: white !important; /* Teks bawaan putih */
+}
+.nav-link-top:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Background putih agak transparan */
+  color: white !important; /* Teks tetap putih */
+}
+
+/* KONDISI 2: Saat Navbar di-scroll (Putih) */
+.nav-link-scrolled {
+  color: #333 !important; /* Teks bawaan hitam/gelap biasa */
+}
+.nav-link-scrolled:hover {
+  background-color: rgba(15, 44, 89, 0.1); /* Background biru muda transparan */
+  color: #0F2C59 !important; /* Teks berubah jadi biru pekat ETHOL */
+}
+
+/* Membuat bayangan yang jauh lebih halus, menyebar, dan transparan */
+.navbar-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important; 
+}
+
+.nav-link-custom {
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  font-size: 0.95rem; /* Mengecilkan ukuran teks menu */
+  padding: 6px 12px !important; /* Diperkecil dari 8px 16px supaya background hovernya lebih nge-pas */
+}
