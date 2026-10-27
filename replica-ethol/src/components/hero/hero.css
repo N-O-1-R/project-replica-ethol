@@ -1,0 +1,266 @@
+/* Container Utama Hero Section */
+.hero-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;            /* Tambahkan ini */
+  align-items: center;       /* Tambahkan ini */
+  padding-top: 60px;         /* Sesuaikan agar tidak terlalu jauh terdorong navbar */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Layer 1: Overlay Navy Lebih Gelap */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 23, 46, 0.65);
+  z-index: 1;
+}
+
+/* Layer 2: Vignette Navy Pekat */
+.hero-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 60% 50%,
+    rgba(7, 23, 46, 0.1) 20%,
+    rgba(5, 15, 30, 0.88) 90%
+  );
+  z-index: 2;
+}
+
+/* Layer 3: Konten (Teks, Tombol) */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  margin-top: -10px; /* Mengangkat konten sedikit ke atas */
+}
+
+/* Badge ETHOLv3 */
+.hero-badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Aturan Ukuran Semua Tombol di Hero Section */
+.hero-content .btn {
+  font-size: 0.85rem !important;  /* Mengecilkan ukuran teks tombol */
+  padding: 12px 28px !important; /* Memperbesar tombol (12px atas-bawah, 28px kanan-kiri) */
+  border-radius: 10px;
+}
+
+/* Tombol Utama */
+.btn-ethol-primary {
+  background-color: #f4b41a;
+  color: #06142b;
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 14px rgba(244, 180, 26, 0.3);
+}
+
+.btn-ethol-primary:hover {
+  background-color: #e0a316;
+  color: #06142b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 180, 26, 0.45);
+}
+
+/* Tombol Outline */
+.btn-ethol-outline {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-ethol-primary,
+.btn-ethol-outline {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;             /* Jarak antara ikon & teks */
+  padding: 10px 22px !important;  /* Ukuran dalam tombol */
+  line-height: 1 !important;      /* Kunci baris agar tidak timpang */
+}
+
+.btn-ethol-primary span,
+.btn-ethol-outline span {
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn-ethol-primary svg,
+.btn-ethol-outline svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.btn-ethol-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Reset line-height agar teks & ikon sejajar presisi */
+.hero-content .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.hero-content .btn span {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Penyesuaian presisi posisi ikon */
+.hero-content .btn svg {
+  display: block;
+  flex-shrink: 0;
+  transform: translateY(1px); /* Geser 1px ke bawah (ubah ke -1px jika ikon terlalu ke bawah) */
+}
+
+/* Kontrol pusat untuk semua ukuran teks & tombol */
+.hero-badge {
+  font-size: 0.9rem !important;
+}
+
+.hero-content h1 {
+  font-size: 3rem !important;
+}
+
+.hero-content p {
+  font-size: 1.15rem !important;
+  max-width: 550px;
+}
+
+.hero-content .btn {
+  font-size: 1.15rem !important;
+}
+
+/* LAYER PARTIKEL */
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2; /* Di atas vignette, di bawah konten */
+  pointer-events: none;
+}
+
+/* Base style tiap titik partikel */
+.particle {
+  position: absolute;
+  bottom: -20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation: floatUp 8s infinite ease-in-out;
+}
+
+/* Variasi Posisi, Ukuran, Kecepatan & Warna Partikel */
+.particle-1  { left: 5%;  width: 3px; height: 3px; animation-duration: 14s; animation-delay: 0s; }
+.particle-2  { left: 12%; width: 2px; height: 2px; animation-duration: 18s; animation-delay: 3s; }
+.particle-3  { left: 20%; width: 4px; height: 4px; animation-duration: 16s; animation-delay: 1s; }
+.particle-4  { left: 28%; width: 2px; height: 2px; animation-duration: 20s; animation-delay: 5s; }
+.particle-5  { left: 35%; width: 5px; height: 5px; animation-duration: 15s; animation-delay: 2s; }
+.particle-6  { left: 42%; width: 2px; height: 2px; animation-duration: 22s; animation-delay: 7s; }
+.particle-7  { left: 50%; width: 3px; height: 3px; animation-duration: 17s; animation-delay: 4s; }
+.particle-8  { left: 57%; width: 2px; height: 2px; animation-duration: 19s; animation-delay: 1.5s; }
+.particle-9  { left: 65%; width: 4px; height: 4px; animation-duration: 16s; animation-delay: 6s; }
+.particle-10 { left: 72%; width: 2px; height: 2px; animation-duration: 21s; animation-delay: 2.5s; }
+.particle-11 { left: 78%; width: 5px; height: 5px; animation-duration: 15s; animation-delay: 8s; }
+.particle-12 { left: 85%; width: 3px; height: 3px; animation-duration: 18s; animation-delay: 0.5s; }
+.particle-13 { left: 92%; width: 4px; height: 4px; animation-duration: 14s; animation-delay: 4.5s; }
+.particle-14 { left: 8%;  width: 2px; height: 2px; animation-duration: 23s; animation-delay: 9s; }
+.particle-15 { left: 25%; width: 4px; height: 4px; animation-duration: 17s; animation-delay: 6.5s; }
+.particle-16 { left: 48%; width: 2px; height: 2px; animation-duration: 19s; animation-delay: 3.5s; }
+.particle-17 { left: 60%; width: 3px; height: 3px; animation-duration: 15s; animation-delay: 10s; }
+.particle-18 { left: 70%; width: 5px; height: 5px; animation-duration: 22s; animation-delay: 5.5s; }
+.particle-19 { left: 82%; width: 3px; height: 3px; animation-duration: 16s; animation-delay: 7.5s; }
+.particle-20 { left: 95%; width: 4px; height: 4px; animation-duration: 20s; animation-delay: 11s; }
+
+/* Animasi Bawah ke Atas */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-105vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* GELOMBANG MENGALIR HORISONTAL */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 4;
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: 200%; /* Melebarkan SVG agar pergeseran meluncur terus tanpa putus */
+  height: 120px; /* Ketinggian gelombang diatur dari sini */
+}
+
+/* Animasi Pergeseran Lurus ke Samping */
+.wave-layer-1 {
+  animation: moveWaveLeft 16s linear infinite;
+}
+
+.wave-layer-2 {
+  animation: moveWaveRight 12s linear infinite;
+}
+
+.wave-layer-3 {
+  animation: moveWaveLeft 20s linear infinite;
+}
+
+/* Keyframes Mengalir ke Kiri */
+@keyframes moveWaveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Keyframes Mengalir ke Kanan */
+@keyframes moveWaveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

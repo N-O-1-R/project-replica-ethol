@@ -1,0 +1,87 @@
+/* 1. Aturan dasar menu link (gabungan & rapi) */
+.nav-link-custom {
+  transition: all 0.25s ease-in-out;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 6px 14px !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* KONDISI 1: Saat Navbar di atas (Transparan) */
+.nav-link-top {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.nav-link-top:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+/* Menu Aktif saat Transparan */
+.nav-link-top.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* KONDISI 2: Saat Navbar di-scroll (Putih) */
+.nav-link-scrolled {
+  color: #4a5568 !important;
+}
+.nav-link-scrolled:hover {
+  background-color: rgba(15, 44, 89, 0.08);
+  color: #0F2C59 !important;
+  transform: translateY(-1px);
+}
+/* Menu Aktif saat Di-scroll */
+.nav-link-scrolled.active {
+  background-color: rgba(15, 44, 89, 0.15);
+  color: #0F2C59 !important;
+  font-weight: 600 !important;
+}
+
+/* Shadow Navbar saat Di-scroll */
+.navbar-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important; 
+}
+
+/* Styling tombol login (Teks lebih kecil, ukuran tombol lebih mantap) */
+.btn-login-top,
+.btn-login-scrolled {
+  font-size: 0.9rem !important;  /* Mengecilkan ukuran teks */
+  padding: 10px 28px !important; /* Memperbesar tombol (10px atas-bawah, 28px kanan-kiri) */
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Styling & Animasi Tombol Login */
+.btn-login-top {
+  background-color: #F4B41A;
+  color: #0F2C59;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(244, 180, 26, 0.3);
+}
+.btn-login-top:hover {
+  background-color: #e0a316;
+  color: #0F2C59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(244, 180, 26, 0.45);
+}
+
+.btn-login-scrolled {
+  background-color: #0F2C59;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(15, 44, 89, 0.25);
+}
+.btn-login-scrolled:hover {
+  background-color: #0a1f3d;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 44, 89, 0.4);
+}

@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import AppHeader from './components/header';
-// import AppHero from './components/Hero';
+import AppHeader from './components/header/header';
+import AppHero from './components/hero/hero';
 // import AppAbout from './components/about';
 // import AppServices from './components/services';
 // import AppWorks from './components/works';
@@ -17,23 +17,11 @@ function App() {
   return (
     <div className="App">
       <header id="header">
-        <AppHeader />
-        <div style={{ backgroundColor: '#0F2C59', height: '100vh', paddingTop: '150px' }}>
-        <h1 className="text-white text-center mt-5">
-          Sorot menu di atas! Animasinya pasti kelihatan sekarang.
-        </h1>
-      </div>
-
-      {/* AREA 2: Ini simulasi konten bawah yang warnanya terang */}
-      <div style={{ backgroundColor: '#f8f9fa', height: '1500px', paddingTop: '100px' }}>
-        <h1 className="text-center text-dark">
-          Coba scroll ke sini dan sorot lagi menunya!
-        </h1>
-      </div>
+      <AppHeader />
       </header> 
       <main>
-        {/* <AppHero />
-        <AppAbout />
+        <AppHero />
+        {/* <AppAbout />
         <AppServices />
         <AppWorks />
         <AppTeams />
